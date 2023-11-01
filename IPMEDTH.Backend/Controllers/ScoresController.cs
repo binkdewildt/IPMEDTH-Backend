@@ -1,5 +1,7 @@
 ﻿using IPMEDTH.Domain.Application.Models;
 using IPMEDTH.Domain.Application.Services;
+using IPMEDTH.Domain.Core.Repositories;
+using IPMEDTH.Domain.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IPMEDTH.Backend.Controllers
@@ -11,9 +13,9 @@ namespace IPMEDTH.Backend.Controllers
     {
         private readonly IScoreService _service;
 
-        public ScoresController(IScoreService scoreService)
+        public ScoresController(IScoreRepository scoreRepository)
         {
-            this._service = scoreService;
+            this._service = new ScoreService(scoreRepository);
         }
 
 
