@@ -16,6 +16,9 @@ namespace IPMEDTH.Domain.Infrastructure.Repositories.Base
             dbContext.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
+        /// <summary>
+        /// Marked as virtual so the GetSet can be overriden, this way a .Include(x => x.x) can be done on specific repositories.
+        /// </summary>
         protected virtual IQueryable<T> GetSet()
         {
             return _dbContext.Set<T>();
