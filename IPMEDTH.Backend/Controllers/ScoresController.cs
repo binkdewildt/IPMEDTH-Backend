@@ -20,6 +20,12 @@ namespace IPMEDTH.Backend.Controllers
 
 
         #region Create (C)
+        [HttpPost]
+        public ActionResult<ScoreModel> CreateScore([FromBody] ScoreModel model)
+        {
+            _service.Create(model);
+            return Ok(model);
+        }
         #endregion
 
 
@@ -43,6 +49,12 @@ namespace IPMEDTH.Backend.Controllers
 
 
         #region Delete (D)
+        [HttpDelete("{id}")]
+        public ActionResult DeleteById(string id)
+        {
+            _service.DeleteById(id);
+            return Ok();
+        }
         #endregion
 
 
