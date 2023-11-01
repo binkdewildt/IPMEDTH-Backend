@@ -1,0 +1,23 @@
+﻿{
+	"$schema": "https://json.schemastore.org/launchsettings.json",
+	"iisSettings": {
+		"windowsAuthentication": false,
+		"anonymousAuthentication": true,
+		"iisExpress": {
+			"applicationUrl": "http://localhost:42598",
+			"sslPort": 44369
+		}
+	},
+	"profiles": {
+		"IPMEDTH.Backend": {
+			"commandName": "Project",
+			"dotnetRunMessages": true,
+			"launchBrowser": false,
+			"launchUrl": "",
+			"applicationUrl": "https://localhost:7064;http://localhost:5091",
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Development"
+			}
+		}
+	}
+}
