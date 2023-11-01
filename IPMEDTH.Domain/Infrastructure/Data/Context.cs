@@ -1,4 +1,5 @@
 ﻿using IPMEDTH.Domain.Core.Entities;
+using IPMEDTH.Domain.Core.Entities.Base;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,6 +14,8 @@ namespace IPMEDTH.Domain.Infrastructure.Data
 
         #region DbSets
         public DbSet<ScoreEntity> Scores { get; set; } = null!;
+
+        public DbSet<TestingEntity> Testings { get; set; } = null!;
         #endregion
 
 
