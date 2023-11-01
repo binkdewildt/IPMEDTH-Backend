@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using IPMEDTH.Domain.Core.Repositories;
 using IPMEDTH.Domain.Infrastructure.Data;
 using IPMEDTH.Domain.Infrastructure.Repositories;
+using IPMEDTH.Backend.Middlewares;
 
 namespace IPMEDTH.Backend
 {
@@ -40,7 +41,7 @@ namespace IPMEDTH.Backend
             var app = builder.Build();
 
             #region Middlewares
-            //app.UseMiddleware<>();
+            app.UseMiddleware<ExceptionMiddleware>();
             #endregion
 
             if (app.Environment.IsDevelopment())
