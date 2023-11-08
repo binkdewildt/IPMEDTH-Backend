@@ -36,7 +36,8 @@ namespace IPMEDTH.Tests.Domain.Models.Base
         [Test]
         public void TestHashCode()
         {
-            Assert.That(model.GetHashCode(), Is.EqualTo(model.GetHashCode()));
+            var hash = model.GetHashCode();
+            Assert.That(model.GetHashCode(), Is.EqualTo(hash));
         }
         #endregion
     }
