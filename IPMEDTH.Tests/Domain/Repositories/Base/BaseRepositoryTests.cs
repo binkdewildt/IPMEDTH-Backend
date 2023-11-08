@@ -118,10 +118,22 @@ namespace IPMEDTH.Tests.Domain.Repositories.Base
         public void TestDelete()
         {
             _repository.Delete(entity1);
-            _repository.DeleteById(entity2.Id);
+            Assert.That(_repository.Count(), Is.EqualTo(entities.Count - 1));
+        }
 
-            var oldCount = entities.Count;
-            Assert.That(_repository.Count(), Is.EqualTo(oldCount - 2));
+        [Test]
+        public void TestDeleteById()
+        {
+            _repository.DeleteById(entity2.Id);
+            Assert.That(_repository.Count(), Is.EqualTo(entities.Count - 1));
+        }
+
+
+        [Test]
+        public void TestDeleteNonExistant()
+        {
+            _repository.Delete(entityNonExistant);
+            Assert.That(_repository.Count(), Is.EqualTo(entities.Count - 0));
         }
         #endregion
     }

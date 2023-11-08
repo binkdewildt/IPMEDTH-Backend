@@ -58,7 +58,11 @@ namespace IPMEDTH.Domain.Core.Services.Base
         public virtual M? GetById(string id)
         {
             E? entity = _repository.GetById(id);
-            var mapped = ObjectMapper.Mapper.Map<M?>(entity);
+
+            if (entity == null)
+                return null;
+
+            var mapped = MapToModel(entity);
             return mapped;
         }
         #endregion

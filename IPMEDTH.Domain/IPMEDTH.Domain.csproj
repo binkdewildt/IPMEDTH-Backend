@@ -1,20 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Mapper\Converters\" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>6</WarningLevel>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.1" />
-    <PackageReference Include="AutoMapper.Extensions.EnumMapping" Version="3.1.0" />
-    <PackageReference Include="BDWildt.CSExtensions" Version="2023.10.10.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>6</WarningLevel>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.EnumMapping" Version="3.1.0" />
+		<PackageReference Include="BDWildt.CSExtensions" Version="2023.10.10.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+	</ItemGroup>
 
 </Project>

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using IPMEDTH.Domain.Application.Models;
+using IPMEDTH.Domain.Application.Models.Testing;
 using IPMEDTH.Domain.Core.Entities;
+using IPMEDTH.Domain.Core.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +34,10 @@ namespace IPMEDTH.Domain.Application.Mapper
             public AspnetRunDtoMapper()
             {
                 CreateMap<ScoreEntity, ScoreModel>()
+                    .ReverseMap();
+
+
+                CreateMap<TestingEntity, TestingModel>()
                     .ReverseMap();
             }
         }
