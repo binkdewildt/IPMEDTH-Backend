@@ -1,10 +1,10 @@
 ﻿using IPMEDTH.Domain.Core.Entities;
-using IPMEDTH.Domain.Core.Entities.Base;
 using IPMEDTH.Domain.Infrastructure.Repositories;
 using IPMEDTH.Tests.Domain.Base;
 
 namespace IPMEDTH.Tests.Domain.Repositories
 {
+    [TestFixture]
     public class ScoreRepositoryTests : RepositoryTest<ScoreRepository, ScoreEntity>
     {
 

@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPMEDTH.Backend", "IPMEDTH.Backend\IPMEDTH.Backend.csproj", "{7CDAEE77-4668-41C5-85D9-6D416DC143D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPMEDTH.Backend", "IPMEDTH.Backend\IPMEDTH.Backend.csproj", "{7CDAEE77-4668-41C5-85D9-6D416DC143D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPMEDTH.Domain", "IPMEDTH.Domain\IPMEDTH.Domain.csproj", "{9C1D829D-6E4D-4148-9559-26DD0421FE3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPMEDTH.Domain", "IPMEDTH.Domain\IPMEDTH.Domain.csproj", "{9C1D829D-6E4D-4148-9559-26DD0421FE3E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ADB1993C-5EE5-4C6F-B18E-F42389A6E175}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPMEDTH.Tests", "IPMEDTH.Tests\IPMEDTH.Tests.csproj", "{D340B40B-139D-4149-8509-4A8091C00352}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPMEDTH.Tests", "IPMEDTH.Tests\IPMEDTH.Tests.csproj", "{D340B40B-139D-4149-8509-4A8091C00352}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{54129C7F-47B9-4583-AEE4-F52901A09D93}"
+	ProjectSection(SolutionItems) = preProject
+		commands.txt = commands.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
