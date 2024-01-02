@@ -1,2 +1,8 @@
 Commando om de code te testen en een CoverageReport te genereren:
 dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:"**/*/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:Html
+
+Commando om een nieuwe migratie aan te maken:
+dotnet ef migrations add <name> --project IPMEDTH.Domain --startup-project IPMEDTH.Backend
+
+Commando om de migraties uit te voeren:
+dotnet ef database update --project IPMEDTH.Domain --startup-project IPMEDTH.Backend
