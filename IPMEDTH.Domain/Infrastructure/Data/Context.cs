@@ -46,6 +46,16 @@ namespace IPMEDTH.Domain.Infrastructure.Data
 
             return base.SaveChanges();
         }
+
+
+        /// <summary>
+        /// De TestingEntity niet meenemen in de migrations
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TestingEntity>().ToTable(nameof(Testings), t => t.ExcludeFromMigrations(true));
+        }
         #endregion
 
     }
